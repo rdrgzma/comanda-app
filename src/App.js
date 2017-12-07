@@ -17,9 +17,9 @@ class App extends Component {
     this.addToCart = this.addToCart.bind(this)
   }
     getItems(){
-      return [{id: 1, name: "Cool Banana", price: 2.49},
-              {id: 2, name: "Epic Apple", price: 3.29},
-              {id: 3, name: "Awesome Grape", price: 0.49}];
+      return [{id: 1, name: "Cerveja", price: 15.00},
+              {id: 2, name: "Refrigerante", price: 10.00},
+              {id: 3, name: "Batata-frita", price: 20.00}];
     }
 
     addToCart(item) {
@@ -48,7 +48,7 @@ class App extends Component {
     return (
       <div>
       <nav>
-        <h3>Products</h3>
+        <h3>Produtos</h3>
         <Cart cart={this.state.cart} />
       </nav>
         <div className="Products">  

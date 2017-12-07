@@ -25,13 +25,13 @@ nav {
     font-weight: 700;
     display: inline; }
   .Cart .Title::before {
-    content: 'Open '; }
+    content: ' + '; }
 
 .Cart-Open {
   max-height: 10rem;
   box-shadow: 0 0.2rem 3rem black; }
   .Cart-Open .Title::before {
-    content: 'Close '; }
+    content: ' - '; }
 
 .Products {
   background-color: #eeeff5;

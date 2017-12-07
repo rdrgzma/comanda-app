@@ -32,7 +32,7 @@ nav {
   }
   
   .Title::before {
-    content: 'Open ';
+    content: ' + ';
   }
 }
 
@@ -41,7 +41,7 @@ nav {
   box-shadow: 0 0.2rem 3rem black;
   
     .Title::before {
-    content: 'Close ';
+    content: ' - ';
   }
 }
 

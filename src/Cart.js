@@ -21,10 +21,10 @@ class Cart extends Component{
       render(){
         return (
             <div className={"Cart " + (this.state.open ? "Cart-Open" : "")} onClick={this.openCart} >
-              <p className="Title">Cart</p>
+              <p className="Title">Pedido</p>
               <div>
               {this.props.cart.length > 0 ? this.props.cart.map((item) => {
-                return <p key={item.id}>{item.name}{item.quantity > 1 ? <span> {item.quantity}</span> : ''}</p> }) : <p>Empty</p>}
+                return <p key={item.id}>{item.name}{item.quantity > 1 ? <span> {item.quantity}</span> : ''}</p> }) : <p>Não há pedidos</p>}
               </div>
             </div>
           );
