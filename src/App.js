@@ -17,18 +17,6 @@ class App extends Component {
     this.getItems = this.getItems.bind(this)
     this.addToCart = this.addToCart.bind(this)
   }
-    getItems(){
-      fetch(URL+'/estabelecimentos/1', {
-        method: 'get'
-      }).then(response => {
-        return response.json()  
-      }).then(data =>{
-        console.log(data.produtos)
-        return data.produtos
-
-      })
-      
-    }
 
     addToCart(item) {
       var found = false;
@@ -51,7 +39,7 @@ class App extends Component {
 
     }
   componentDidMount(){
-    fetch('http://localhost:8080/estabelecimentos/1', {
+    fetch(URL+'/estabelecimentos/1', {
       method: 'get'
     }).then(response => {
       return response.json()  
