@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Cart from './Cart'
 import Product from './Product'
 
+const URL='https://comanda-server.herokuapp.com'
 
 class App extends Component {
 
@@ -17,7 +18,7 @@ class App extends Component {
     this.addToCart = this.addToCart.bind(this)
   }
     getItems(){
-      fetch('http://localhost:8080/estabelecimentos/1', {
+      fetch(URL+'/estabelecimentos/1', {
         method: 'get'
       }).then(response => {
         return response.json()  

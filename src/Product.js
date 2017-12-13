@@ -8,16 +8,10 @@ class Product extends Component{
 
       addToCart() {
    
-        if (window.confirm('Clique em um botão')){
-        alert ("Você clicou no botão OK,\n"+
-        "porque foi retornado o valor: ");
+        if (window.confirm('Você deseja adicionar este produto?')){
         this.props.addToCart(this.props.details);
         } else {
-       
-        alert ("Você clicou no botão CANCELAR,\n"+
-        "porque foi retornado o valor: ");
         }
-        
       }
     
       render(){
