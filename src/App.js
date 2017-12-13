@@ -9,7 +9,7 @@ class App extends Component {
     super(props)
 
     this.state = {
-      items: this.getItems(),
+      items: [],
       cart: []
       
     }
@@ -17,24 +17,31 @@ class App extends Component {
     this.addToCart = this.addToCart.bind(this)
   }
     getItems(){
-      return [{id: 1, name: "Cerveja", price: 15.00},
-              {id: 2, name: "Refrigerante", price: 10.00},
-              {id: 3, name: "Batata-frita", price: 20.00}];
+      fetch('http://localhost:8080/estabelecimentos/1', {
+        method: 'get'
+      }).then(response => {
+        return response.json()  
+      }).then(data =>{
+        console.log(data.produtos)
+        return data.produtos
+
+      })
+      
     }
 
     addToCart(item) {
       var found = false;
       var updatedCart = this.state.cart.map((cartItem) => {
-        if (cartItem.name === item.name) {
+        if (cartItem.nome === item.nome) {
           found = true;
-          cartItem.quantity++;
+          cartItem.quantidade++;
           return cartItem;
         } else {
           return cartItem;
         }
       });
       
-      if (!found) { updatedCart.push({id: item.id, name: item.name, price: item.price, quantity: 1}) }
+      if (!found) { updatedCart.push({id: item.id, nome: item.nome, preco: item.preco, quantidade: 1}) }
       
       this.setState({
         cart: updatedCart
@@ -42,9 +49,24 @@ class App extends Component {
 
 
     }
-  
+  componentDidMount(){
+    fetch('http://localhost:8080/estabelecimentos/1', {
+      method: 'get'
+    }).then(response => {
+      return response.json()  
+    }).then(data =>{
+      console.log(data.produtos)
+      this.setState({
+        items: data.produtos
+      })
+      return data.produtos
+
+    })
+
+  }
 
   render() {
+    if(!this.state.items) return <p>Carregando ...</p>
     return (
       <div>
       <nav>

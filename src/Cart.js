@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import three from './menublack.png';
 
 class Cart extends Component{
 
@@ -21,10 +22,10 @@ class Cart extends Component{
       render(){
         return (
             <div className={"Cart " + (this.state.open ? "Cart-Open" : "")} onClick={this.openCart} >
-              <p className="Title">Pedido</p>
-              <div>
+              <p className="Title"><img className="IconPedidos"src={three} alt='Pedidos'/></p>
+              <div >
               {this.props.cart.length > 0 ? this.props.cart.map((item) => {
-                return <p key={item.id}>{item.name}{item.quantity > 1 ? <span> {item.quantity}</span> : ''}</p> }) : <p>Não há pedidos</p>}
+                return <p key={item.id}>{item.nome}{item.quantidade > 1 ? <span> {' : '+item.quantidade}</span> : ' : 1'}</p> }) : <p>Não há pedidos</p>}
               </div>
             </div>
           );
