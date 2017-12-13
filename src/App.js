@@ -14,7 +14,6 @@ class App extends Component {
       cart: []
       
     }
-    this.getItems = this.getItems.bind(this)
     this.addToCart = this.addToCart.bind(this)
   }
 
@@ -34,9 +33,7 @@ class App extends Component {
       
       this.setState({
         cart: updatedCart
-      }, console.log(this.state.cart));
-
-
+      })
     }
   componentDidMount(){
     fetch(URL+'/estabelecimentos/1', {
