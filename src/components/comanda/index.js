@@ -56,10 +56,10 @@ class Comanda extends Component {
     if(!this.state.itens) return <p>Carregando ...</p>
     return (
       <div>
-      <nav>
+      <section>
         <h3>Produtos</h3>
         <Pedido pedido={this.state.pedido} />
-      </nav>
+      </section>
         <div className="Produtos">  
           {this.state.itens.map((item) => {
             return <Produto key = {item.id} produto={item} addPedido={this.addPedido} />

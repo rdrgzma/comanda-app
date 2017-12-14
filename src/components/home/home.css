@@ -1,0 +1,11 @@
+.titulo{
+    text-align: center
+}
+
+.cardBar{
+    margin-top: 25;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+
+}

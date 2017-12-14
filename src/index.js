@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Main from './components/main'
 import './styles/comanda.css';
-import App from './components/comanda';
+
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
 registerServiceWorker();
