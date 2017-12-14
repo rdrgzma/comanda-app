@@ -13,7 +13,7 @@ body {
   nav h3 {
     padding-left: 1rem;
   }
-  .Cart {
+  .Pedido {
     min-width: 10rem;
     padding: 1rem;
     color: #000;
@@ -23,34 +23,34 @@ body {
     max-height: 1.0rem;
     transition: all ease-out 0.3s;
   }
-  .Cart .Title, .Cart .Title::before {
+  .Pedido .Title, .Pedido .Title::before {
     font-weight: 700;
     display: inline;
   }
-  .Cart .Title .IconPedidos, .Cart .Title::before .IconPedidos {
+  .Pedido .Title .IconPedidos, .Pedido .Title::before .IconPedidos {
     width: 10;
     height: 30;
   }
-  .Cart .Title::before {
+  .Pedido .Title::before {
     content: ' ';
   }
-  .Cart .Cart-list {
+  .Pedido .Pedido-list {
     margin-bottom: 10;
   }
-  .Cart-Open {
+  .Pedido-Open {
     max-height: 10rem;
     box-shadow: 0 0.2rem 3rem black;
   }
-  .Cart-Open .Title::before {
+  .Pedido-Open .Title::before {
     content: '  ';
   }
-  .Products {
+  .Produtos {
     background-color: #eeeff5;
     color: #0e0d0d;
     display: flex;
     flex-direction: column;
   }
-  .Product {
+  .Produto {
     display: flex;
     justify-content: space-between;
     padding: 0.5em 1em;
@@ -60,10 +60,10 @@ body {
     background-color: #a1a3b3;
     box-shadow: 0 0.2rem 0.2rem black;
   }
-  .Product p:nth-of-type(2):before {
+  .Produto p:nth-of-type(2):before {
     content: '$';
   }
-  .Product:active {
+  .Produto:active {
     box-shadow: 0 0.2rem 0.4rem black inset;
     padding-top: 0.7rem;
     margin-bottom: 0.8rem;

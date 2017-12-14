@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import three from './menublack.png';
 
-class Cart extends Component{
+class Pedido extends Component{
 
 
     constructor(props) {
@@ -10,10 +10,10 @@ class Cart extends Component{
         this.state = {
             open: false
         }
-        this.openCart = this.openCart.bind(this)
+        this.openPedido = this.openPedido.bind(this)
       }
 
-      openCart() {
+      openPedido() {
         this.setState({
           open: !this.state.open
         })
@@ -21,10 +21,10 @@ class Cart extends Component{
 
       render(){
         return (
-            <div className={"Cart " + (this.state.open ? "Cart-Open" : "")} onClick={this.openCart} >
+            <div className={"Pedido " + (this.state.open ? "Pedido-Open" : " ")} onClick={this.openPedido} >
               <p className="Title"><img className="IconPedidos"src={three} alt='Pedidos'/></p>
               <div >
-              {this.props.cart.length > 0 ? this.props.cart.map((item) => {
+              {this.props.pedido.length > 0 ? this.props.pedido.map((item) => {
                 return <p key={item.id}>{item.nome}{item.quantidade > 1 ? <span> {' : '+item.quantidade}</span> : ' : 1'}</p> }) : <p>Não há pedidos</p>}
               </div>
             </div>
@@ -33,4 +33,4 @@ class Cart extends Component{
 
 }
 
-export default Cart
+export default Pedido

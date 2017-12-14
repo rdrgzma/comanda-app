@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 
-class Product extends Component{
+class Produto extends Component{
     constructor(props) {
         super(props)
-        this.addToCart = this.addToCart.bind(this)
+        this.addPedido = this.addPedido.bind(this)
       }
 
-      addToCart() {
+      addPedido() {
    
         if (window.confirm('Você deseja adicionar este produto?')){
-        this.props.addToCart(this.props.details);
+        this.props.addPedido(this.props.produto);
         } else {
         }
       }
     
       render(){
-        let item = this.props.details;
+        let item = this.props.produto;
         return (
-          <div className="Product" onClick={this.addToCart}>
+          <div className="Produto" onClick={this.addPedido}>
             <p>{item.nome}</p>
             <p>{item.preco}</p>
           </div>
@@ -25,4 +25,4 @@ class Product extends Component{
       }
 
 }
-export default Product;
+export default Produto;
